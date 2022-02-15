@@ -24,13 +24,22 @@ Route::get('/about', function () {
         "title" => "About",
         "nama" => "Mahija Danadyaksa Sadtomo",
         "email" => "4x4keren@gmail.com",
-        "gambar" => "axxa.jpg"
+        "gambar" => "aksa.jpg",
+        "cv" => "cv.jpg"
     ]);
 });
 
 Route::get('/gallery', function () {
     return view('gallery',  [
-        "title" => "Gallery"
+        "title" => "Gallery",
+        "cb" => "Cb Blackpink.jpg",
+        "hotpot" => "hotpot.png",
+        "Casing" => "Casing.jpg",
+        "JOY" => "JOY.png",
+        "poster" => "poster.png",
+        "PHBS" => "PHBS.jpg",
+        "lnp" => "lnp.png",
+        "bp" => "bp.png"
     ]);
 });
 
