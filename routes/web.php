@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,10 +45,10 @@ Route::get('/gallery', function () {
     ]);
 });
 
-use App\Http\Controllers\ContactController;
-//Route::resource('/contacts', ContactController::class);
+
 Route::get('/contacts/create', [ContactController::class, 'create'])->name('contacts.create');
 Route::post('/contacts/store', [ContactController::class, 'store'])->name('contacts.store');
+
 
 Auth::routes();
 
@@ -56,6 +58,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/contacts/{id}/edit', [ContactController::class, 'edit'])->name('contacts.edit');
     Route::post('/contacts/{id}/update', [ContactController::class, 'update'])->name('contacts.update');
     Route::get('/contacts/{id}/destroy', [ContactController::class, 'destroy'])->name('contacts.destroy');
+    
+    Route::get('/books/index', [BookController::class, 'index'])->name('books.index');
+    Route::get('/books/{id}/edit', [BookController::class, 'edit'])->name('books.edit');
+    Route::post('/books/{id}/update', [BookController::class, 'update'])->name('books.update');
+    Route::get('/books/{id}/destroy', [BookController::class, 'destroy'])->name('books.destroy');
+    Route::get('books/create', [BookController::class, 'create'])->name('books.create');
+    Route::post('/books/store', [BookController::class, 'store'])->name('books.store');
 });
 
 Auth::routes();

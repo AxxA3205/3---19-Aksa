@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', 'AxxA >>Data Contacts<<')
 @section('content')
 <div class="main-content">

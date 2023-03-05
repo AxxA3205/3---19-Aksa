@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'AxxA >>Data Contacts<<')
+@section('title', 'AxxA >>Data Buku<<')
 @section('content')
 <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -18,31 +18,37 @@
                                     <table class="table table-borderless table-data3">
                                         <thead>
                                             <tr>
-                                                <th>Id Buku</th>
-                                                <th>Nama Buku</th>
+                                                <th>No.</th>
+                                                <th>Judul Buku</th>
+                                                <th>Kategori</th>
                                                 <th>Pengarang</th>
                                                 <th>Penerbit</th>
                                                 <th>Tahun Terbit</th>  
-                                                <th>Gambar Buku</th>
+                                                <th>Cover Buku</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($contacts as $index => $contact)
+                                            @foreach ($books as $index => $book)
                                             <tr>
                                                 <td>{{ $index + 1}}</td>
-                                                <td>{{ $contact->nama}}</td>
-                                                <td>{{ $contact->email}}</td>
-                                                <td>{{ $contact->pesan}}</td>
-                                                <td>
-                                                    <a href="{{ route('contacts.edit', $contact->id)}}"><i class="fas fa-edit"></i> </a>
+                                                <td>{{ $book->kategori}}</td>
+                                                <td>{{ $book->judul_buku}}</td>
+                                                <td>{{ $book->pengarang}}</td>
+                                                <td>{{ $book->penerbit}}</td>
+                                                <td>{{ $book->tahun_terbit}}</td>
+                                                <td><img src="{{ asset('uploads/' . $book->file_path) }}"/></td>
+                                                <td nowrap>
+                                                    <a href="{{ route('books.edit', $book->id)}}"><i class="fas fa-edit"></i> </a>
                                                     |
-                                                    <a href="{{ route('contacts.destroy', $contact->id)}}"><i class="fas fa-trash" style="color:red"></i> </a>
+                                                    <a href="{{ route('books.destroy', $book->id)}}"><i class="fas fa-trash" style="color:red"></i> </a>
+                                                    
                                                 </td>
                                             </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
-                                    {{ $contacts->links() }}
+                                    {{ $books->links() }}
                                 </div>
                                 <!-- END DATA TABLE-->
                             </div>

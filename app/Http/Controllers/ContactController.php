@@ -19,6 +19,11 @@ class ContactController extends Controller
     }
 
     /**
+     * public function index()
+     * {
+     * $contacts = Contact::paginate(5);
+     * return view ('admin/contacts/index', compact('contact'));
+     * }
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -31,7 +36,12 @@ class ContactController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     *public function create()
+     *{
+    *return view ('contacts', [ "title" => "Contacts"]);  
+     *}
+     * 
+     *  Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -46,6 +56,12 @@ class ContactController extends Controller
     }
 
     /**
+     * public function store(){
+     * $contact  = Contact::create($request->all());
+     * $contact -> save();
+     * 
+     * return redirect()->route('contacts.create');
+     * }
      * Display the specified resource.
      *
      * @param  int  $id
@@ -57,6 +73,8 @@ class ContactController extends Controller
     }
 
     /**
+     * public function show ($id){
+     * }
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -69,6 +87,10 @@ class ContactController extends Controller
     }
 
     /**
+     * public function edit($id){
+     * $contact = Contact::findOrFail($id);
+     * return view ('admin/contact/edit', compact ('contacts'));
+     * }
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -98,3 +120,6 @@ class ContactController extends Controller
        return redirect()->route('contacts.index');
     }
 }
+/**
+
+*/
