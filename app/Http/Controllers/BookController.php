@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookStoreRequest;
 use Illuminate\Http\Request;
 use App\Models\Books;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class BookController extends Controller
 {
@@ -35,10 +37,11 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookStoreRequest $request)
     {
         $this->validate($request, [
             'judul_buku' => 'required',
+            'deskripsi' => 'required',
             'kategori' => 'required',
             'pengarang' => 'required',
             'penerbit' => 'required',
@@ -82,7 +85,7 @@ class BookController extends Controller
     {
         $books = Books::findOrFail($id);
         return view('admin/books/edit_books', compact('books'));
-        
+
     }
 
     /**
@@ -97,6 +100,7 @@ class BookController extends Controller
        if (empty($request->file('file_path'))) {
         $books->update([
             'judul_buku' => $request->judul_buku,
+            'deskripsi' => $request->deskripsi,
             'kategori' => $request->kategori,
             'pengarang' => $request->pengarang,
             'tahun_terbit' => $request->tahun_terbit,
@@ -108,6 +112,7 @@ class BookController extends Controller
         storage::delete($books->file_path);
         $books->update([
             'judul_buku' => $request->judul_buku,
+            'deskripsi' => $request->deskripsi,
             'kategori' => $request->kategori,
             'pengarang' => $request->pengarang,
             'tahun_terbit' => $request->tahun_terbit,
@@ -131,4 +136,23 @@ class BookController extends Controller
 
        return redirect()->route('books.index');
     }
+
+    public function tampil()
+    {
+        $books = Books:: all();
+        $title = Books::all();
+        return view('index',[
+            'books' => $books,
+            'title'=> $title
+        ]);
+
+    }
+    public function exportpdf() {
+        $books = Books::all();
+        view()->share('books', $books);
+        $pdf =PDF::loadview('admin/books/databooks-pdf');
+        return $pdf->download('Home Library Data Books.pdf');
+        return 'berhasil';
+    }
 }
+?>

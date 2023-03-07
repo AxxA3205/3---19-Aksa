@@ -9,6 +9,13 @@ class books extends Model
 {
     protected $table = 'books';
     protected $primaryKey = "id";
-    protected $fillable = ['id', 'judul_buku','kategori', 'pengarang', 'penerbit', 'tahun_terbit','file_path'];
+    protected $fillable = [
+    'judul_buku',
+    'deskripsi',
+    'kategori',
+    'pengarang',
+    'penerbit',
+    'tahun_terbit',
+    'file_path'];
 }
 ?>

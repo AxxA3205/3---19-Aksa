@@ -58,13 +58,16 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/contacts/{id}/edit', [ContactController::class, 'edit'])->name('contacts.edit');
     Route::post('/contacts/{id}/update', [ContactController::class, 'update'])->name('contacts.update');
     Route::get('/contacts/{id}/destroy', [ContactController::class, 'destroy'])->name('contacts.destroy');
-    
+
     Route::get('/books/index', [BookController::class, 'index'])->name('books.index');
     Route::get('/books/{id}/edit', [BookController::class, 'edit'])->name('books.edit');
     Route::post('/books/{id}/update', [BookController::class, 'update'])->name('books.update');
     Route::get('/books/{id}/destroy', [BookController::class, 'destroy'])->name('books.destroy');
     Route::get('books/create', [BookController::class, 'create'])->name('books.create');
     Route::post('/books/store', [BookController::class, 'store'])->name('books.store');
+    Route::get('/', [BookController::class, 'tampil'])->name('books.tampil');
+    Route::get('/exportpdf', [BookController::class, 'exportpdf'])->name('books.exportpdf');
 });
 
 Auth::routes();
+?>
