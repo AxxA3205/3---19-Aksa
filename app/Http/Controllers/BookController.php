@@ -15,9 +15,13 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $books =  Books::paginate(5);
+        if($request->has('search')){
+            $books = Books::where('judul_buku', 'LIKE', '%'.$request->search.'%')->paginate(5);
+        } else{
+            $books = Books::paginate(5);
+        }
       return view('admin.books.data_books', compact('books'));
     }
 
@@ -137,14 +141,22 @@ class BookController extends Controller
        return redirect()->route('books.index');
     }
 
-    public function tampil()
+    public function tampil(Request $request)
     {
-        $books = Books:: all();
-        $title = Books::all();
-        return view('index',[
-            'books' => $books,
-            'title'=> $title
-        ]);
+        // $books = Books:: all();
+        // $title = Books::all();
+        // return view('index',[
+        //     'books' => $books,
+        //     'title'=> $title
+        // ]);
+        if($request->has('search')){
+            $title= "Hasil Pencarian";
+            $books = Books::where('judul_buku', 'LIKE', '%'.$request->search.'%')->paginate(5);
+        } else{
+            $title= "Hasil Pencarian";
+            $books = Books::paginate(5);
+        }
+      return view('index', compact('books', 'title'));
 
     }
     public function exportpdf() {

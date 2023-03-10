@@ -6,6 +6,26 @@
                 <div class="col-md-12">
                     <div class="overview-wrap">
                         <h2 class="title-1">Data Buku</h2>
+
+                    </div>
+                    <div class="overview-wrap">
+                        <div class="row g-3 align-items-center mt-2">
+                            <div class="col-auto">
+                                <div class="d-flex flex-row">
+                                    <div class="p-1">
+                                        <form action="{{route('books.index')}}" method="GET">
+                                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
+                                            {{-- <button class="btn btn-outline-success" type="submit">Search</button> --}}
+                                        
+                                    </div>
+                                    <div class="p-2">
+
+                                            <button class="btn btn-outline-success" type="submit">Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="/exportpdf"><button class="btn btn-success" type="submit">Export Data</button></a>
                     </div>
                 </div>

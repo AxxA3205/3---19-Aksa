@@ -6,10 +6,9 @@
             @foreach($books as $book)
                 <div class="col-md-3 mt-3">
                     <div class="card">
-                        <img src="{{ asset('uploads/' . $book->file_path) }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('uploads/' . $book->file_path) }}" height="300" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $book->judul_buku }}</h5>
-                            <p class="card-text">{{ $book->deskripsi }}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">{{ $book->kategori }}</li>
@@ -20,6 +19,8 @@
                         </ul>
                     </div>
                 </div>
+
+                
                 @endforeach
         </div>
 

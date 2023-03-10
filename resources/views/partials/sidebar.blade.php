@@ -1,8 +1,10 @@
 <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="{{asset('admin/images//icon/logo.png')}}" alt="Cool Admin" />
+                    <img src="{{asset('images/Home.png')}}" width="80" height="60" alt="Cool Admin" />
+
                 </a>
+                Home Library
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
@@ -20,12 +22,12 @@
                             <a href="{{ route ('books.index')}}">
                                 <i class="fas fa-chart-bar"></i>Data Buku</a>
                         </li>
-                    
+
                         <li>
                             <a href="{{ route ('books.create')}}">
                                 <i class="fas fa-chart-bar"></i>Tambah Buku</a>
                         </li>
-                        
+
                             </ul>
                         </li>
                     </ul>

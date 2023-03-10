@@ -15,11 +15,7 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('index', [
-        "title" => "Beranda"
-    ]);
-});
+Route::get('/', [BookController::class, 'tampil'])->name('books.tampil');
 
 Route::get('/about', function () {
     return view('about', [
@@ -65,7 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/books/{id}/destroy', [BookController::class, 'destroy'])->name('books.destroy');
     Route::get('books/create', [BookController::class, 'create'])->name('books.create');
     Route::post('/books/store', [BookController::class, 'store'])->name('books.store');
-    Route::get('/', [BookController::class, 'tampil'])->name('books.tampil');
+
     Route::get('/exportpdf', [BookController::class, 'exportpdf'])->name('books.exportpdf');
 });
 
