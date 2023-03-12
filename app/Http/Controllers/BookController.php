@@ -151,10 +151,10 @@ class BookController extends Controller
         // ]);
         if($request->has('search')){
             $title= "Hasil Pencarian";
-            $books = Books::where('judul_buku', 'LIKE', '%'.$request->search.'%')->paginate(5);
+            $books = Books::where('judul_buku', 'LIKE', '%'.$request->search.'%')->get();
         } else{
             $title= "Hasil Pencarian";
-            $books = Books::paginate(5);
+            $books = Books::all();
         }
       return view('index', compact('books', 'title'));
 

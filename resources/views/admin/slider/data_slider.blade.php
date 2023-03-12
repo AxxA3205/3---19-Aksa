@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="overview-wrap">
-                        <h2 class="title-1">Data Buku</h2>
+                        <h2 class="title-1">Data Slider</h2>
 
                     </div>
                     <div class="overview-wrap">
@@ -13,7 +13,7 @@
                             <div class="col-auto">
                                 <div class="d-flex flex-row">
                                     <div class="p-0">
-                                        <form action="{{route('books.index')}}" method="GET">
+                                        <form action="{{route('slider.index')}}" method="GET">
                                             <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
                                             {{-- <button class="btn btn-outline-success" type="submit">Search</button> --}}
                                     </div>
@@ -26,7 +26,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/exportpdf"><button class="btn btn-success" type="submit">Export Data</button></a>
+
                     </div>
                 </div>
             </div>
@@ -40,31 +40,23 @@
                                 <tr>
                                     <th>No.</th>
                                     <th nowrap>Judul</th>
-                                    <th>Deskripsi</th>
-                                    <th>Kategori</th>
-                                    <th>Pengarang</th>
-                                    <th>Penerbit</th>
-                                    <th nowrap>Tahun Terbit</th>
+                                    <th>Sub Judul</th>
                                     <th nowrap>Cover</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($books as $index => $book)
+                                @foreach ($slider as $index => $slide)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td nowrap>{{ $book->judul_buku }}</td>
-                                        <td>{{ $book->deskripsi }}</td>
-                                        <td>{{ $book->kategori }}</td>
-                                        <td nowrap>{{ $book->pengarang }}</td>
-                                        <td nowrap>{{ $book->penerbit }}</td>
-                                        <td>{{ $book->tahun_terbit }}</td>
-                                        <td><img src="{{ asset('uploads/' . $book->file_path) }}" /></td>
+                                        <td nowrap>{{ $slide->judul }}</td>
+                                        <td>{{ $slide->subjudul }}</td>
+                                        <td><img src="{{ asset('uploads/' . $slide->foto) }}" /></td>
                                         <td nowrap>
-                                            <a href="{{ route('books.edit', $book->id) }}"><i class="fas fa-edit"></i>
+                                            <a href="{{ route('slider.edit', $slide->id) }}"><i class="fas fa-edit"></i>
                                             </a>
                                             |
-                                            <a href="{{ route('books.destroy', $book->id) }}"><i class="fas fa-trash"
+                                            <a href="{{ route('slider.destroy', $slide->id) }}"><i class="fas fa-trash"
                                                     style="color:red"></i> </a>
 
                                         </td>
@@ -72,7 +64,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $books->links() }}
+
                     </div>
                     <!-- END DATA TABLE-->
                 </div>

@@ -2,7 +2,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="#">
-            <img src="{{ asset('images/Home.png') }}" width="60" height="40" />
+            <img src="{{ asset('images/Home.png') }}" width="80" height="60" />
 
 
         </a>

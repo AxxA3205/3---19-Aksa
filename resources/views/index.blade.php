@@ -1,12 +1,17 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="container">
+{{-- @include('partials.slider') --}}
+@include('partials.card')
+    {{-- <div class="container">
+
+
         <div class="row mt-5">
-            @foreach($books as $book)
+            @foreach ($books as $book)
                 <div class="col-md-3 mt-3">
                     <div class="card">
-                        <img src="{{ asset('uploads/' . $book->file_path) }}" height="300" class="card-img-top" alt="...">
+                        <img src="{{ asset('uploads/' . $book->file_path) }}" height="300" class="card-img-top"
+                            alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $book->judul_buku }}</h5>
                         </div>
@@ -19,13 +24,9 @@
                         </ul>
                     </div>
                 </div>
-
-                
-                @endforeach
+            @endforeach
         </div>
 
 
-    </div>
-
-
+    </div> --}}
 @endsection
