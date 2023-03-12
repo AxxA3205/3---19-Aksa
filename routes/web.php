@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
+// use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BukuController;
@@ -27,14 +27,14 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/index', [DashboardController::class, 'index'])->name('admin.index');
-    Route::get('/books/index', [BukuController::class, 'index'])->name('books.index');
-    Route::get('/books/{id}/edit', [BookController::class, 'edit'])->name('books.edit');
-    Route::post('/books/{id}/update', [BookController::class, 'update'])->name('books.update');
-    Route::get('/books/{id}/destroy', [BookController::class, 'destroy'])->name('books.destroy');
-    Route::get('books/create', [BookController::class, 'create'])->name('books.create');
-    Route::post('/books/store', [BookController::class, 'store'])->name('books.store');
-    Route::get('/exportpdf', [BookController::class, 'exportpdf'])->name('books.exportpdf');
-    Route::get('/exportexcel', [BookController::class, 'exportexcel'])->name('books.exportexcel');
+    // Route::get('/books/index', [BukuController::class, 'index'])->name('books.index');
+    // Route::get('/books/{id}/edit', [BookController::class, 'edit'])->name('books.edit');
+    // Route::post('/books/{id}/update', [BookController::class, 'update'])->name('books.update');
+    // Route::get('/books/{id}/destroy', [BookController::class, 'destroy'])->name('books.destroy');
+    // Route::get('books/create', [BookController::class, 'create'])->name('books.create');
+    // Route::post('/books/store', [BookController::class, 'store'])->name('books.store');
+    // Route::get('/exportpdf', [BookController::class, 'exportpdf'])->name('books.exportpdf');
+    // Route::get('/exportexcel', [BookController::class, 'exportexcel'])->name('books.exportexcel');
 
     Route::get('/buku/index', [BukuController::class, 'index'])->name('buku.index');
     Route::get('/buku/{id}/edit', [BukuController::class, 'edit'])->name('buku.edit');
