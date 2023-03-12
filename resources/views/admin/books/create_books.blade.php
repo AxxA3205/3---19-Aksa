@@ -4,7 +4,7 @@
         <div class="container">
             <div class="title-top mb-5">
                 <h2 class="title-1">Tambah Buku</h2>
-                <form method="post" action="{{ route('books.store') }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('buku.store') }}" enctype="multipart/form-data">
                     @csrf
                     @method('POST')
 

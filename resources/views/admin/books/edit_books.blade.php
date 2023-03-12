@@ -5,7 +5,7 @@
             <div class="title-top mb-5">
                 <h2 class="fw
         -bold">Update Buku</h2>
-                <form method="post" action="{{ route('books.update', $books->id) }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('buku.update', $books->id) }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label>Judul</label>

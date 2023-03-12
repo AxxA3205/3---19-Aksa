@@ -43,7 +43,7 @@
 
             <ul class="navbar-nav ms-auto">
                 <div class="me-1">
-                    <form action="{{ route('books.tampil') }}" method="GET">
+                    <form action="{{ route('buku.tampil') }}" method="GET">
                         <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search"
                             name="search">
 

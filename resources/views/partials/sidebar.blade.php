@@ -24,11 +24,11 @@
                         <i class="fas fa-tachometer-alt"></i>Buku</a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="{{ route('books.index') }}">
+                            <a href="{{ route('buku.index') }}">
                                 <i class="fas fa-chart-bar"></i>Data Buku</a>
                         </li>
                         <li>
-                            <a href="{{ route('books.create') }}">
+                            <a href="{{ route('buku.create') }}">
                                 <i class="fas fa-chart-bar"></i>Tambah Buku</a>
                         </li>
                     </ul>

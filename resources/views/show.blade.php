@@ -52,19 +52,19 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">{{ $book->judul_buku }}</h3>
-                <h6 class="card-subtitle">oleh {{ $book->pengarang }}</h6>
+                <h3 class="card-title">hello</h3>
+                <h6 class="card-subtitle">hello</h6>
                 <div class="row">
                     <div class="col-12 col-md-4 mb-5 align-self-center">
-                        <div class="white-box text-center"><img src="{{ asset('uploads/' . $book->file_path) }} " height="500"
+                        <div class="white-box text-center"><img src="hello" height="500"
                                 class="img-responsive"></div>
                     </div>
                     <div class="col-lg-7 col-md-5 col-sm-6">
                         <h4 class="box-title">Deskripsi Buku</h4>
-                        <p>{{ $book->deskripsi }}</p>
-                        <p>Kategori : {{ $book->kategori }}</p>
-                        <p>Penerbit : {{ $book->penerbit }}</p>
-                        <p>Tahun terbit : {{ $book->tahun_terbit }}</p>
+                        <p>hello</p>
+                        <p>hello</p>
+                        <p>hello</p>
+                        <p>hello</p>
 
                     </div>
                 </div>

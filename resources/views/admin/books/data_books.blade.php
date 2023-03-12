@@ -13,7 +13,7 @@
                             <div class="col-auto">
                                 <div class="d-flex flex-row">
                                     <div class="p-0">
-                                        <form action="{{route('books.index')}}" method="GET">
+                                        <form action="{{route('buku.index')}}" method="GET">
                                             <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search">
                                             {{-- <button class="btn btn-outline-success" type="submit">Search</button> --}}
                                     </div>
@@ -64,10 +64,10 @@
                                         <td>{{ $book->tahun_terbit }}</td>
                                         <td><img src="{{ asset('uploads/' . $book->file_path) }}" /></td>
                                         <td nowrap>
-                                            <a href="{{ route('books.edit', $book->id) }}"><i class="fas fa-edit"></i>
+                                            <a href="{{ route('buku.edit', $book->id) }}"><i class="fas fa-edit"></i>
                                             </a>
                                             |
-                                            <a href="{{ route('books.destroy', $book->id) }}"><i class="fas fa-trash"
+                                            <a href="{{ route('buku.destroy', $book->id) }}"><i class="fas fa-trash"
                                                     style="color:red"></i> </a>
 
                                         </td>
