@@ -26,7 +26,10 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/exportpdf"><button class="btn btn-success" type="submit">Export Data</button></a>
+                    <div>
+                        <a href="/exportexcel"><button class="btn btn-success" type="submit">Export Excel</button></a>
+                        <a href="/exportpdf"><button class="btn btn-danger" type="submit">Export PDF</button></a>
+                    </div>
                     </div>
                 </div>
             </div>

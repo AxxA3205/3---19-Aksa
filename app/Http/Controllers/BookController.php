@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Books;
 use Illuminate\Support\Facades\Storage;
 use PDF;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BookController extends Controller
 {
@@ -76,7 +77,8 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        //
+        $books = Book::find($id);
+        return view('show', compact('books'));
     }
 
     /**
@@ -165,6 +167,10 @@ class BookController extends Controller
         $pdf =PDF::loadview('admin/books/databooks-pdf');
         return $pdf->download('Home Library Data Books.pdf');
         return 'berhasil';
+    }
+    public function exportexcel() {
+        $books = Books::all();
+        return Excel::download(new \App\Exports\BooksExport, 'AksaBooks.xlsx');
     }
 }
 ?>

@@ -4,8 +4,6 @@
 {{-- @include('partials.slider') --}}
 @include('partials.card')
     {{-- <div class="container">
-
-
         <div class="row mt-5">
             @foreach ($books as $book)
                 <div class="col-md-3 mt-3">
@@ -26,7 +24,5 @@
                 </div>
             @endforeach
         </div>
-
-
     </div> --}}
 @endsection

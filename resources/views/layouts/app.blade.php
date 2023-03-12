@@ -20,7 +20,7 @@
     <div class="page-wrapper">
 
         <!-- HEADER MOBILE-->
-        @include('partials/header-mobile')
+        @include('partials/header')
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
