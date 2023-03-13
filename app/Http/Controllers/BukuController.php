@@ -112,7 +112,7 @@ class BukuController extends Controller
             'tahun_terbit' => $request->tahun_terbit,
             'penerbit' => $request->penerbit
         ]);
-        return redirect()->route('books.index');
+        return redirect()->route('buku.index');
        } else{
         $books = Books::find($id);
         storage::delete($books->file_path);
@@ -125,7 +125,7 @@ class BukuController extends Controller
             'penerbit' => $request->penerbit,
             'file_path' => $request->file('file_path')->store('books'),
         ]);
-        return redirect()->route('books.index');
+        return redirect()->route('buku.index');
        }
     }
 
@@ -140,7 +140,7 @@ class BukuController extends Controller
         $books = Books:: findOrFail($id);
        $books->delete();
 
-       return redirect()->route('books.index');
+       return redirect()->route('buku.index');
     }
 
     public function tampil(Request $request)
