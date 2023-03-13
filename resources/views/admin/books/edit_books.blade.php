@@ -13,7 +13,7 @@
                     </div>
                     <div class="form-group">
                         <label>Deskripsi</label>
-                        <textarea name="deskripsi" class="form-control" value="{{ old('deskripsi', $books->deskripsi ) }}"></textarea>
+                        <textarea name="deskripsi" class="form-control">{{ old('deskripsi', $books->deskripsi ) }}</textarea>
                     </div>
                     <div class="form-group">
                     <label>Kategori</label>

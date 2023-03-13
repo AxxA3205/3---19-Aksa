@@ -170,7 +170,8 @@ class BookController extends Controller
     }
     public function exportexcel() {
         $books = Books::all();
-        return Excel::download(new \App\Exports\BooksExport, 'AksaBooks.xlsx');
+        return Excel::download(new \App\Exports\BooksExport, 'Aksa Books.xlsx');
+        return 'berhasil';
     }
 }
 ?>

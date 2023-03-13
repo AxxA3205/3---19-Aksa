@@ -1,7 +1,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
         <a href="#">
-            <img src="{{ asset('images/Home.png') }}" width="80" height="60" alt="Cool Admin" />
+            <img src="{{ asset('images/Home.png') }}" width="60" height="40" alt="Cool Admin" />
 
         </a>
         Home Library
