@@ -44,6 +44,15 @@
             border-top: 0px solid #dee2e6 !important;
             color: #728299 !important;
         }
+.button{
+    font-size: 18px;
+    width: 1065px;
+    background-color:#ef7c10;
+    color: white;
+    border-radius: 5px;
+    
+}
+
     </style>
 </head>
 
@@ -71,9 +80,8 @@
             </div>
             <div class="container text-center">
                 <div class="row align-items-end">
-                    <div class="col-md-10 offset-md-1 ">
-                        <button type="button" class="btn btn-block" style="background-color:#ef7c10; color: white">Baca Buku</button>
-                        &nbsp;
+                    <div class="col ">
+                        <button type="button" class="button">Baca Buku</button>
                     </div>
                 </div>
             </div>
