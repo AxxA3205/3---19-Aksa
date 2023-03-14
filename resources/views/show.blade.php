@@ -10,7 +10,7 @@
 
     <style type="text/css">
         body {
-            background-color: #edf1f5;
+            background-color: #9a1d1d;
             margin-top: 20px;
         }
 
