@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-danger bg-danger" style="background-color: #ef7c10">
+<nav class="navbar navbar-expand-lg" style="background-color: #c81f1f">
     <div class="container">
 
         <a class="navbar-brand" href="#">

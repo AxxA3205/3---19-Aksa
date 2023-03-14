@@ -45,7 +45,7 @@
                                     <th nowrap>Judul</th>
                                     <th>Deskripsi</th>
                                     <th>Kategori</th>
-                                    <th>Pengarang</th>
+                                    <th>Penulis</th>
                                     <th>Penerbit</th>
                                     <th nowrap>Tahun Terbit</th>
                                     <th nowrap>Cover</th>

@@ -13,35 +13,36 @@
                     </div>
                     <div class="form-group">
                         <label>Deskripsi</label>
-                        <textarea name="deskripsi" class="form-control">{{ old('deskripsi', $books->deskripsi ) }}</textarea>
+                        <textarea name="deskripsi" class="form-control">{{ old('deskripsi', $books->deskripsi) }}</textarea>
                     </div>
                     <div class="form-group">
-                    <label>Kategori</label>
-                    <input type="text" name="kategori" class="form-control" value="{{ $books->kategori }}">
+                        <label>Kategori</label>
+                        <input type="text" name="kategori" class="form-control" value="{{ $books->kategori }}">
+                    </div>
+                    <div class="form-group">
+                        <label>Penulis</label>
+                        <input type="text" name="pengarang" class="form-control" value="{{ $books->pengarang }}">
+                    </div>
+                    <div class="form-group">
+                        <label>Penerbit</label>
+                        <input type="text" name="penerbit" class="form-control" value="{{ $books->penerbit }}">
+                    </div>
+                    <div class="form-group">
+                        <label>Tahun Terbit</label>
+                        <input type="number" name="tahun_terbit" class="form-control"
+                            value="{{ $books->tahun_terbit }}">
+                    </div>
+                    <div class="form-group">
+                        <label>Cover</label>
+                        <input type="file" name="file_path" class="form-control" value="{{ $books->file_path }}">
+                    </div>
+                    <br>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Edit
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-            <label>Pengarang</label>
-            <input type="text" name="pengarang" class="form-control" value="{{ $books->pengarang }}">
         </div>
-        <div class="form-group">
-            <label>Penerbit</label>
-            <input type="text" name="penerbit" class="form-control" value="{{ $books->penerbit }}">
-        </div>
-        <div class="form-group">
-            <label>Tahun Terbit</label>
-            <input type="text" name="tahun_terbit" class="form-control" value="{{ $books->tahun_terbit }}">
-        </div>
-        <div class="form-group">
-            <label>Cover</label>
-            <input type="file" name="file_path" class="form-control" value="{{ $books->file_path }}">
-        </div>
-        <br>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Edit
-        </div>
-        </form>
-    </div>
-    </div>
     </div>
 @endsection

@@ -10,11 +10,12 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Kategori: {{ $book->kategori }}</li>
-                        <li class="list-group-item">Ditulis oleh {{ $book->pengarang }}</li>
-                        <li class="list-group-item">Diterbit oleh {{ $book->penerbit }}</li>
-                        <li class="list-group-item">Diterbit pada {{ $book->tahun_terbit }}</li>
+                        <li class="list-group-item">Penulis: {{ $book->pengarang }}</li>
+                        <li class="list-group-item">Penerbit: {{ $book->penerbit }}</li>
+                        <li class="list-group-item">Tahun Terbit: {{ $book->tahun_terbit }}</li>
                         <li class="list-group-item">
-                            <a href="{{ route('show', $book->id) }}" class="btn btn-primary">Lihat</a>
+                            <a href="{{ route('show', $book->id) }}" class="btn"
+                                style="background-color: #ef7c10; color:white">Lihat</a>
                         </li>
                     </ul>
                 </div>

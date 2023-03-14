@@ -10,7 +10,7 @@
 
     <title> Home Library </title>
   </head>
-  <body style="background-color: #fee0b2">
+  <body style="background-color: #9a1d1d">
 
   @include('partials.navbar')
 
